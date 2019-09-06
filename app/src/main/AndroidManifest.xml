@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.android.networkscanner">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".SpeedTestActivity"></activity>
+        <activity
+            android:name=".SplashActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ClientListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".PingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".PortActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".TracerouteActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".UserSettingActivity"
+            android:screenOrientation="portrait" />
+
+        <service
+            android:name=".ConnectionService"
+            android:enabled="true" />
+    </application>
+
+</manifest>
